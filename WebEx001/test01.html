@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>test</title>
 </head>
+
 <body>
-    <h1>Header</h1>
-    <h1>Header</h1>
-    <h1>Header</h1>
     <script>
-        var headers = document.querySelectorAll("h1");
-        window.onload = function change(){
-            for(var i = 0;i<headers.length;i++){
-                var header = headers[i];
-                header.style.color="red";
-                header.innerHTML="Hello";
-            }
-        }
+        var win = window.open("/popup.html", "PopupWin", "width=500,height=600");
+
     </script>
 </body>
+
 </html>

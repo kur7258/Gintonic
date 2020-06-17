@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>winopen</title>
+</head>
+
+<body>
+    <h1>HTML5</h1>
+    <hr>
+    <div id="open">HTML5를 학습하는 사이트입니다. 여기서 HTML5 , CSS3, 자바스크립트를 배울 수 있습니다.</div>
+    <script>
+        var win = document.getElementById("open");
+        document.addEventListener("load", winOpen());
+
+        function winOpen() {
+            var retW = 500;
+            var retH = 400;
+
+            var ret = window.open("", "Web Browser", "width = 200, height = 80, left = " + retW + ", top = " + retH);
+            ret.document.write("접속 감사합니다!");
+        }
+    </script>
+</body>
+</html>
