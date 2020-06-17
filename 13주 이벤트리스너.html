@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <style>
+        #content {
+            visibility: hidden;
+            z-index: 100;
+            position: absolute;
+            border: 1.5px solid yellowgreen;
+            font-size: 1rem;
+            background-color: aliceblue;
+            width: 10rem;
+            height: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>마우스를 올리면 설명 출력</h1>
+    <hr>
+    여름 방학 때 하고 싶은 것들
+    <ul>
+        <li name="list">자전거로 대한민국 일주</li>
+        <li name="list">책 100권 읽기</li>
+        <li name="list">철인 3종 경기 준비</li>
+        <li name="list">자바스크립트 정복</li>
+    </ul>
+    <div id="content"></div>
+    <script>
+        var blist = document.getElementsByName('list');
+        var indiv = document.getElementById("content");
+        for(var i=0; i<blist.length; i++){
+            blist[i].addEventListener('mouseover', on);
+            blist[i].addEventListener('mouseout', out);
+        }
+        
+        function on(e) { //mouseover
+            var divLeft = e.clientX;
+            var divTop = e.clientY;
+
+            indiv.style.visibility = "visible";
+            indiv.style.left = divLeft + "px";
+            indiv.style.top = divTop + "px";
+            
+
+            switch (e.target) {
+                case blist[0]:
+                    indiv.innerHTML = "자전거를 탄다.";
+                    break;
+                    
+                case blist[1]:
+                    indiv.innerHTML = "책을 읽는다.";
+                    break;
+                    
+                case blist[2]:
+                    indiv.innerHTML = "운동을 한다.";
+                    break;
+                    
+                case blist[3]:
+                    indiv.innerHTML = "자스를 한다.";
+                    break;
+            }
+
+        }
+
+        function out() { //숨기기
+            indiv.style.visibility = "hidden";
+        }
+    </script>
+</body>
+</html>

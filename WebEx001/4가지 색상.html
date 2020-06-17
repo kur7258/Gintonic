@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>various_circle</title>
+
+<style>
+@keyframes circle {
+	 25%  {background-color:red;}
+	 50% {background-color:blue;}
+	 75% {background-color:aqua; }
+	 100% {background-color:yellow;}
+}
+
+	span.circle1{
+		width:150px;
+		height:150px;
+		border-top-left-radius:150px;
+		background-color:red;
+		position: absolute;
+		animation:circle 4s infinite normal;
+	}
+	span.circle2{
+		width:150px;
+		height:150px;
+		border-top-right-radius:150px;
+		background-color:green;
+		position: absolute;
+        left: 160px;
+        animation:circle 4s 1s infinite normal;
+	}
+	span.circle3{
+		width:150px;
+		height:150px;
+		border-bottom-right-radius:150px;
+		background-color:aqua;
+		position: absolute;
+		top:160px;
+		left:160px;
+		animation:circle 4s 2s infinite normal;
+	}
+	span.circle4{
+		width:150px;
+		height:150px;
+		border-bottom-left-radius:150px;
+		background-color:yellow;
+		position: absolute;
+		top:160px;
+		animation:circle 4s 3s infinite normal;
+	}
+
+</style>
+</head>
+<body>
+		<span class="circle1"></span>
+		<span class="circle2"></span>
+		<span class="circle3"></span>
+		<span class="circle4"></span>
+</body>
+</html>

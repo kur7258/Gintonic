@@ -1,0 +1,37 @@
+<meta charset="utf-8"/>
+<html>
+<head>
+<title>JDK? ???</title>
+<script language="javascript">
+//????? javascript ?????.
+function javascript(){
+    //??? ???? check? ??? ????
+    console.log(document.getElementsByName("check").length);
+ 
+    //check? ?? ?? ??? ????
+    var size = document.getElementsByName("check").length;
+    for(var i = 0; i < size; i++){
+        console.log(document.getElementsByName("check")[i].value);
+    }
+ 
+    //check??? ?? check??? ??? ?? ? ????
+    var size = document.getElementsByName("check").length;
+    for(var i = 0; i < size; i++){
+        if(document.getElementsByName("check")[i].checked == true){
+            console.log(document.getElementsByName("check")[i].value+"(??)");
+        }
+    }
+ 
+    //check?? ??? ??? ?????
+    document.getElementsByName("check")[2].checked = true;
+}
+</script>
+</head>
+<body>
+<input type='button' onclick='javascript()' value='??'/>
+<input type='checkbox' name='check' value='?1'/> ?1<br/>
+<input type='checkbox' name='check' value='?2'/> ?2<br/>
+<input type='checkbox' name='check' value='?3'/> ?3<br/>
+<input type='checkbox' name='check' value='?4'/> ?4<br/>
+</body>
+</html>

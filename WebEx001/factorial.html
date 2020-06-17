@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	<title> factorial </title>
+</head>
+<body>
+	<script>
+		function fac(n) {
+			if (n == 1)
+				return 1;
+			else
+				return n * fac(n - 1);
+		}
+
+		function test() {
+			var num = document.forms["form1"];
+			document.getElementById("num").innerHTML = num[0].value;
+			document.getElementById("result").innerHTML = fac(num[0].value);
+		}
+	
+	</script>
+
+	<h3> N 팩토리얼 계산값을 입력하시오 </h3>
+	<form id = "form1">
+		<input type = "text" id = "number">
+		<input type = "button" name = "btn" value = "N 팩토리얼 계산" onclick = "test()">
+	</form>
+	 <br>
+	 <span id = "num"></span>! 계산 결과는
+	 <span id = "result"></span>입니다.
+</body>
+</html>

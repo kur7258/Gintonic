@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>문자 배열</title>
+</head>
+
+
+<body>
+    <h3>문자열 배열 다루기</h3>
+    <hr>
+
+    <div id="arrays">
+    </div>
+    <script>
+        var str = "";
+        var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+        var name = names.join(" ");
+        str += "이름 : " + name + "<br>"; 
+
+        function sortByLength(array) {
+            return array.sort(function(a, b) {
+                return b.length - a.length;
+            });
+        };
+        str += "가장 긴 이름 : " + sortByLength(names)[0] + "<br>";
+        
+        var dicName = names.sort();
+        str += "가장 먼저 나오는 이름 : " + dicName[0] + "<br>";
+        
+        str += "증가순 이름 : " + dicName.join(" ") + "<br>";
+
+
+
+        document.getElementById('arrays').innerHTML = str;
+
+    </script>
+</body>
+
+</html>
