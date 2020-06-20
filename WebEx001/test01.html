@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>test</title>
 </head>
-
 <body>
-    <ol>
-        <li>사과</li>
-        <ul id="apple">
-            <li>부사</li>
-            <li>홍옥</li>
-        </ul>
-        <li>바나나</li>
-    </ol>
+   <ol>
+       <li>사과</li>
+       <ul id="apple">
+           <li>부사</li>
+           <li>홍옥</li>
+       </ul>
+       <li>바나나</li>
+   </ol>
     <script>
-        window.onload = function() {
-            var u = document.getElementById('apple');
-            var l = document.createElement('li');
-            l.innerHTML = "아오리";
-            u.appendChild(l);
-        }
-
+        var ul =document.getElementById('apple');
+        var list =document.createElement('li');
+        list.innerHTML = "아오리";
+        ul.appendChild(list);
     </script>
 </body>
-
 </html>
